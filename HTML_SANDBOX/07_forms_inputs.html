@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms & Inputs</title>
+</head>
+<body>
+  <form action="process.php"> <!-- File to save the form I guess -->
+    <!-- Text -->
+    <div>
+      <label for="name">Name</label>
+      <br>
+      <input type="text" name="" id="name" name="name" placeholder="Enter name">
+    </div>
+
+    <br>
+    <!-- Email -->
+    <div>
+      <label for="Email">Email</label>
+      <br>
+      <input type="email" name="email" id="email" placeholder="example@something.com">  <!-- we set type to email-->
+    </div>
+
+    <br>
+    <!-- TextArea -->
+    <div>
+      <label for="Message">Message</label>
+      <br>
+      <textarea name="message" id="message" cols="50" rows="10"></textarea>
+    </div>
+
+    <br>
+    <!-- Select -->
+    <div>
+      <label for="sex">Sex</label><br>
+      <select name="sex" id="sex">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other" selected >Other</option>
+      </select>
+    </div>
+
+    <br>
+    <!-- Number -->
+    <div>
+      <label for="age">Age</label><br>
+      <input type="number" name="age" id="age">
+    </div>
+
+    <br>
+    <!-- Date -->
+    <div>
+      <label for="birthdate">Birthdate</label><br>
+      <input type="date" name="birthdate" id="birthdate">
+    </div>
+
+    <br>
+    <!-- RadioButton -->
+    <div>
+      <label for="membership">Membership</label><br>
+      <input type="radio" name="membership" id="membership" value="simple" checked > Simple   <!-- value is what that get sent to the server-->
+      <input type="radio" name="membership" id="membership" value="standard"> Standard
+      <input type="radio" name="membership" id="membership" value="super"> Super
+    </div>
+
+    <br>
+    <!-- CheckBox -->
+    <div>
+      <label for="hobbies">I liked</label><br>
+      <input type="checkbox" name="hobbies" id="hobbies" value="sMom"  > Fucking single moms
+      <input type="checkbox" name="hobbies" id="hobbies" value="mMom"> Fucking married moms
+      <input type="checkbox" name="hobbies" id="hobbies" value="crack"> doing crack
+    </div>
+
+    <!-- Input Submit -->
+    <div>
+      <input type="submit" value="submit">
+      <!--or-->
+      <button type="submit" >Submit</button>
+
+
+      <button type="reset">Reset</button>
+      
+    </div>
+
+
+  </form>
+</body>
+</html>
