@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS Positioning</title>
+
+  <style>
+    /* position values : STATIC, RELATIVE, ABSOLUTE, FIXED, STICKY */
+    /* static is default, so fuck that. */
+    body {
+      height: 4000px;
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+    }
+
+    /* 1.relative allows us to set the positions relative to screen edges, so we can use top right bottom left properties */
+    #box-1 {
+      position: relative;
+      top: 50px;
+      left: 50px;
+      background: red;
+
+      /* control third dimension, the higher, the upper on screen. default is zero */
+      z-index: 1;
+    }
+
+
+
+
+
+
+
+    /* 2.absolute will let us to use tblr  relative to the parent class of what we are positioning.
+    if it doesn't have any parent, it will use body as parent.
+    also, parent class must be positioned relative like what I've done here*/
+    .container {
+      /* as we mentioned parent must be positioned relative for absolute to work*/
+      position: relative;
+      width: 500px;
+      height: 500px;
+      background: darkgrey;
+    }
+
+    #box-2 {
+
+      position: absolute;
+      /* 100px from container edges */
+      top: 100px;
+      right: 300px;
+      background: yellow;
+    }
+
+    #box-3 {
+      position: absolute;
+      top: 300px;
+      right: 100px;
+      background: blue;
+    }
+
+
+
+
+
+
+
+
+    /* 3.fixed, will make it fixed to the page edges. if we scroll, it will be in the same place */
+    #box-4 {
+      position: fixed;
+      background: green;
+    }
+
+
+
+
+    /* 4.sticky (used a lot in menus),  watch the file, you'll get it. */
+    #box-5 {
+      position: sticky;
+      top: 0;
+      background: orange;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="box-1" class="box">1</div>
+
+  <div class="container">
+    <div id="box-2" class="box">2</div>
+    <div id="box-3" class="box">3</div>
+  </div>
+
+  <div id="box-4" class="box">4</div>
+  <div id="box-5" class="box">5</div>
+
+
+</body>
+
+</html>
