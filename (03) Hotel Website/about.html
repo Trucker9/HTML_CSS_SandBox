@@ -8,6 +8,8 @@
     <meta name="description" content="welcome to t he most extraordinary hotel in Boston Massachusetts">
     <meta name="keywords" content="hotel, boston hotel, new england hotel, ...">
     <link rel="stylesheet" href="css/style.css">
+    <!-- for screen smaller that 768px it will load this style sheet in addition to last one. every setting we change will be added on top of what we had in the previous stylesheet (Tablet and less) -->
+    <link rel="stylesheet" media="screen and (max-width: 768px) " href="css/mobile.css">
     <title>Hotel BT | About</title>
 </head>
 
@@ -17,7 +19,7 @@
         <!-- we hold to navbar-->
         <nav id="navbar">
             <div class="container">
-                <h1 class d="logo"> <a href="index.html">HBT</a> </h1>
+                <h1 class="logo"> <a href="index.html">HBT</a> </h1>
                 <ul>
                     <li> <a href="index.html">Home</a> </li>
                     <li> <a class="current"  href="about.html">About</a> </li>
