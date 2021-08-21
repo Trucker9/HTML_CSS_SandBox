@@ -9,9 +9,11 @@
     #container {
       display: flex;
       flex-direction: row;
-      /* flex-direction: column; */
-      flex-wrap: wrap;
-      /* flex-flow: row nowrap; */
+
+      /* if it goes more than 12 it pushes it to next line */
+      /*flex-wrap: wrap;*/
+
+      /* flex-flow: row nowrap;  ( result is same as above ) */
     }
 
     .item {
@@ -21,6 +23,7 @@
       text-align: center;
       margin: 0.75rem;
       flex: 1;
+
     }
 
     .item:first-child {
@@ -30,22 +33,24 @@
 </head>
 <body>
   <div id="container">
+  <!-- 12 items    -->
     <div class="item"><h3>Item 1</h3></div>
     <div class="item"><h3>Item 2</h3></div>
     <div class="item"><h3>Item 3</h3></div>
-    <div class="item"><h3>Item 3</h3></div>
-    <div class="item"><h3>Item 3</h3></div>
-    <div class="item"><h3>Item 3</h3></div>
-    <div class="item"><h3>Item 3</h3></div>
-    <div class="item"><h3>Item 3</h3></div>
-    <div class="item"><h3>Item 3</h3></div>
-    <div class="item"><h3>Item 3</h3></div>
-    <div class="item"><h3>Item 3</h3></div>
-    <div class="item"><h3>Item 3</h3></div>
-    <div class="item"><h3>Item 3</h3></div>
-    <div class="item"><h3>Item 3</h3></div>
-    <div class="item"><h3>Item 3</h3></div>
-    <div class="item"><h3>Item 3</h3></div>
+    <div class="item"><h3>Item 4</h3></div>
+    <div class="item"><h3>Item 5</h3></div>
+    <div class="item"><h3>Item 6</h3></div>
+    <div class="item"><h3>Item 7</h3></div>
+    <div class="item"><h3>Item 8</h3></div>
+    <div class="item"><h3>Item 9</h3></div>
+    <div class="item"><h3>Item 10</h3></div>
+    <div class="item"><h3>Item 11</h3></div>
+    <div class="item"><h3>Item 12</h3></div>
+    <div class="item"><h3>Item 13</h3></div>
+    <div class="item"><h3>Item 14</h3></div>
+    <div class="item"><h3>Item 15</h3></div>
+
+
   </div>
 </body>
 </html>
