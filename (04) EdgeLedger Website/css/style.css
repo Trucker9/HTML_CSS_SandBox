@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+/* ### ### SKIP -> INITIAL */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* ### ### SKIP -> DECORATION */
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.4;
+}
+/* ### ### SKIP -> DECORATION */
+a {
+    text-decoration: none;
+}
+/* ### ### SKIP -> DECORATION */
+p {
+    margin: 0.75rem 0;
+}
+
+
+/* ------------------------------------------------------------------------ Utility classes */
+
+/* ### ### SKIP -> DECORATION */
+.text-primary {
+    color: #93cb52;
+}
+
+.btn{
+    display: inline-block;
+    border: none;
+    color: #fff;
+    background: #93cb52;
+    padding: 0.5rem 2rem;
+    border-radius: 5px;
+
+}
+.btn-dark{
+    background: #333333;
+    color: white;
+}
+/* This class will  fit all its content in middle of the screen in a certain width*/
+.container{
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 2rem;
+    overflow: hidden;
+}
+.btn:hover{
+    background: #7ab436;
+}
+
+.large-heading{
+    font-size: 4rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.1;
+}
+.medium-heading{
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.1;
+}
+.bg-white{
+    background: #f4f4f4;
+    color: #333333;
+}
+.bg-dark{
+    background: #333333;
+    color: white;
+}
+.bg-primary{
+    background: #93cb52;
+    color: white;
+}
+.text-center{
+    text-align: center;
+}
+.lead{
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+.list{
+    margin: 0.5rem 0;
+    list-style: none;
+}
+.list li{
+    padding: 0.5rem 0;
+    border-bottom: #444 dotted 1px;
+}
+.py-10{
+padding: 1.5rem 0;
+}
+.py-20{
+    padding: 2rem 0;
+}
+.py-30{
+    padding: 3rem 0;
+}
+.p-10{
+     padding: 1.5rem;
+ }
+.p-20{
+    padding: 2rem;
+}
+.p-30{
+    padding: 3rem;
+}
+
+/*------------------------------------------------------------------------- NavBar */
+#navbar {
+    /*stick to top*/
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
+
+    display: flex; /* all of the children of the navbar are now flex items*/
+    justify-content: space-between; /* logo goes left, list goes right*/
+
+    background: #333;
+    color: #fff; /*links wont affect*/
+    padding: 1rem;
+}
+
+#navbar ul {
+    display: flex; /* this will align list items horiz*/
+    align-items: center; /*center it vertically*/
+    list-style: none;
+}
+
+/* ### ### SKIP -> DECORATION */
+#navbar ul li a {
+    color: #ffffff;
+    padding: 0.75rem;
+    margin: 0 0.25rem;
+}
+
+/* ### ### SKIP -> DECORATION */
+#navbar ul li a:hover {
+    background: #93cb52;
+    border-radius: 5px;
+}
+
+/*------------------------------------------------------------------------- ShowCase */
+
+
+#showcase{
+    background: #333333 url("../img/showcase.jpg") no-repeat center center/cover;
+    height: 100vh;
+    color: white;
+
+
+}
+#showcase .showcase-content{
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    /* we need to set a height for flex container to see the align-content results*/
+    height: 100%; /* 100% of the parent (100vh) */
+    align-items: center;
+    padding: 0 2rem;
+
+    /* overlay */
+    position: absolute;
+    top: 65px;
+    left:0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.4);
+
+}
+
+
+/*------------------------------------------------------------------------- Section: what */
+
+#what .items{
+    display: flex;
+    padding: 1rem;
+}
+#what .items .item{
+    flex: 1;
+    padding: 1rem;
+}
+
+#what .items .item i {
+    background: #93cb52;
+    padding: 1rem;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+/*------------------------------------------------------------------------- Section: who */
+#who{
+    display: flex;
+}
+#who div{
+    /*same size for all flex items*/
+    flex: 1;
+}
+
+#who .who-img {
+    background: url("../img/people.jpg") no-repeat center center;
+    background-size: cover;
+
+}
+
+/*------------------------------------------------------------------------- Section: clients */
+#clients .items{
+    display: flex;
+}
+#clients .items div img{
+    display: block;
+    margin: auto;
+    width: 60%;
+
+}
+/*------------------------------------------------------------------------- contact */
+#contact{
+    display: flex;
+}
+#contact .map, #contact .contact-form{
+    flex: 1;
+}
+
+#contact .contact-form .form-group{
+    margin: 0.75rem;
+
+}
+#contact .contact-form .form-group label{
+    display: block;
+}
+#contact .contact-form .form-group input ,
+#contact .contact-form .form-group textarea{
+    width: 100%;
+    padding: 0.5rem;
+}
+#contact .map {
+    background: aquamarine;
+}
