@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    background: #f4f4f4;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+/* Hiding nested ul s */
+#navbar ul li ul {
+    display: none;
+}
+
+
+#navbar ul{
+    list-style: none;
+}
+
+#navbar ul li {
+    /*doesn't effect links*/
+    color: #333333;
+    display: inline-block;
+    padding: 1rem;
+    /* We make this relative so when we positioned the hidden <ul>s as absolute, those <ul>s position themselves relative
+    (based on) this <li>s not relative to the body as default*/
+    position: relative;
+}
+#navbar ul  .curr{
+    background: coral;
+}
+#navbar ul li:hover{
+    cursor: pointer;
+    background: coral;
+    color: white;
+}
+#navbar ul li:hover a{ color: white;}
+
+ #navbar ul li a{
+     color: #333333;
+     text-decoration: none;
+ }
+
+/* showing nested ul s*/
+#navbar ul li:hover ul{
+    display: block;
+    /* To remove it from the document flow !*/
+    position: absolute;
+    left: 0;
+    width: 200px;
+    margin-top: 1rem;
+}
+#navbar ul li:hover ul li{
+    /* for the background to cover all the width*/
+    background: #e7e7e7;
+    display: flex;
+    justify-content: space-between;
+}
+#navbar ul li:hover ul li a{
+    color: #333333;
+}
+#navbar ul li:hover ul li:hover{
+    background: #e0e0e0;
+    color: inherit;
+}
+#navbar ul li:hover ul li span{
+    color: #fff;
+    background: coral;
+    padding: 0.2rem 0.5rem;
+    text-align: center;
+    font-size: 0.8rem;
+    border-radius: 5px;
+}
+#navbar ul li:hover ul li:hover span {
+    background: chocolate ;
+}
+
+#showcase{
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 2rem;
+    padding: 0 2rem;
+    background: coral;
+    color: #fff;
+
+}
+
+@media (max-width: 600px){
+
+    #navbar ul li{
+        display: block;
+        text-align: center;
+    }
+
+
+    #navbar ul li:hover ul{
+        position: relative;
+
+        width: 100%;
+    }
+    #navbar ul li:hover ul li {
+    text-align: center;
+    }
+}
